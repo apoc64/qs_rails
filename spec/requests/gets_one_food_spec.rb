@@ -16,7 +16,12 @@ describe "get all foods" do
       "name" => "Banana",
       "calories" => 150
       })
+    end
+
+    it 'returns a 404 with no food' do
+      food = Food.create(name: "Banana", calories: 150)
+      get "/api/v1/foods/#{food.id + 1}"
+      expect(response).to_not be_successful
+      expect(response.status).to be(404)
+    end
   end
-  # When I get a request: GET /api/v1/foods/:id
-  # It returns the food object or a 404
-end
