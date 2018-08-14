@@ -18,44 +18,45 @@ describe "get all meals" do
     # with this format:
     expected = [
       {
-        "id": breakfast.id,
-        "name": "Breakfast",
-        "foods": [
+        "id" => breakfast.id,
+        "name" => "Breakfast",
+        "foods" => [
           {
-            "id": banana.id,
-            "name": "Banana",
-            "calories": 150
+            "id" => banana.id,
+            "name" => "Banana",
+            "calories" => 150
           },
           {
-            "id": yogurt.id,
-            "name": "Yogurt",
-            "calories": 550
+            "id" => yogurt.id,
+            "name" => "Yogurt",
+            "calories" => 550
           },
           {
-            "id": apple.id,
-            "name": "Apple",
-            "calories": 220
+            "id" => apple.id,
+            "name" => "Apple",
+            "calories" => 220
           }
         ]
       },
       {
-        "id": snack.id,
-        "name": "Snack",
-        "foods": [
+        "id" => snack.id,
+        "name" => "Snack",
+        "foods" => [
           {
-            "id": banana.id,
-            "name": "Banana",
-            "calories": 150
+            "id" => banana.id,
+            "name" => "Banana",
+            "calories" => 150
           },
           {
-            "id": gum.id,
-            "name": "Gum",
-            "calories": 50
+            "id" => gum.id,
+            "name" => "Gum",
+            "calories" => 50
           }
         ]
       }]
 
       body = JSON.parse(response.body)
+      # binding.pry
       expect(body).to eq(expected)
 
     end
