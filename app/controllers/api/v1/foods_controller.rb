@@ -27,6 +27,16 @@ class Api::V1::FoodsController < ApplicationController
     end
   end
 
+  def destroy
+    if Food.exists?(params[:id])
+      food = Food.find(params[:id])
+      food.destroy
+      render json: {"message" => "Food deleted"}, status: 204
+    else
+      render json: {"message" => "Bad request"}, status: 404
+    end
+  end
+
   private
 
   def food_params
