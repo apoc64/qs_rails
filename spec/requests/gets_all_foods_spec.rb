@@ -5,7 +5,7 @@ describe "get all foods" do
 
     Food.create(name: "Banana", calories: 150)
 
-    get "api/v1/foods"
+    get "/api/v1/foods"
 
     expect(response).to be_successful
     body = JSON.parse(response.body)
