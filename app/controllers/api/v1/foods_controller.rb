@@ -9,6 +9,15 @@ class Api::V1::FoodsController < ApplicationController
     Food.create(food_params)
   end
 
+  def show
+    if Food.exists?(params[:id])
+      food = Food.find(params[:id])
+      render json: food
+    else
+      render json: {"message" => "Bad request"}, status: 404
+    end
+  end
+
   private
 
   def food_params
