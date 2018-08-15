@@ -15,7 +15,7 @@ class Api::V1::Meals::FoodsController < ApplicationController
       meal.foods << food
       render json: {"message" => "Successfully added #{food.name.upcase} to #{meal.name.upcase}"}, status: 201
     else
-
+      render json: {"message" => "Bad request"}, status: 404
     end
   end
 end

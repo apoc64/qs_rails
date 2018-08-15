@@ -16,5 +16,12 @@ describe "post a food to a meal" do
     expect(body).to eq(expected)
   end
 
+  it 'returns a 404 if unseccessful' do
+    breakfast = Meal.create(name: "breakfast")
+    pizza = Food.create(name: "pizza", calories: 400)
 
+    post "/api/v1/meals/#{breakfast.id + 1}/foods/#{pizza.id + 1}"
+
+    expect(response.status).to eq(404)
+  end
 end
