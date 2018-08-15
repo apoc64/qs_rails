@@ -31,7 +31,7 @@ class Api::V1::Meals::FoodsController < ApplicationController
         render json: {"message" => "Bad request"}, status: 404
       end
     else
-
+      render json: {"message" => "Bad request"}, status: 404
     end
   end
 end

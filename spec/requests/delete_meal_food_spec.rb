@@ -25,4 +25,13 @@ describe "post a food to a meal" do
 
     expect(response.status).to eq(404)
   end
+
+  it 'returns a 404 if the meal does not exist' do
+    breakfast = Meal.create(name: "breakfast")
+    pizza = Food.create(name: "pizza", calories: 400)
+
+    delete "/api/v1/meals/#{breakfast.id + 1}/foods/#{pizza.id}"
+
+    expect(response.status).to eq(404)
+  end
 end
