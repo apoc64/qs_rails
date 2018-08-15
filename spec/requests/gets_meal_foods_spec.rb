@@ -36,4 +36,16 @@ describe "get all foods" do
     body = JSON.parse(response.body)
     expect(body).to eq(expected)
   end
+
+  it 'returns a 404 if meal not found' do
+    breakfast = Meal.create(name: "Breakfast")
+    banana = breakfast.foods.create(name: "Banana", calories: 150)
+    yogurt = breakfast.foods.create(name: "Yogurt", calories: 550)
+    apple = breakfast.foods.create(name: "Apple", calories: 220)
+
+
+    get "/api/v1/meals/#{breakfast.id + 1}/foods"
+
+    expect(response.status).to eq(404)
+  end
 end
