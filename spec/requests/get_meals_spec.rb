@@ -56,8 +56,6 @@ describe "get all meals" do
       }]
 
       body = JSON.parse(response.body)
-      # binding.pry
       expect(body).to eq(expected)
-
     end
   end

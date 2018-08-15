@@ -5,6 +5,9 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :foods, only: [:index, :create, :show, :update, :destroy]
       resources :meals, only: [:index]
+      namespace :meals do
+        get '/:id/foods', to: 'foods#index'
+      end
     end
   end
 end
