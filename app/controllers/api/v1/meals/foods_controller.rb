@@ -28,7 +28,7 @@ class Api::V1::Meals::FoodsController < ApplicationController
         meal_food.destroy
         render json: {"message" => "Successfully removed #{food.name.upcase} to #{meal.name.upcase}"}
       else
-
+        render json: {"message" => "Bad request"}, status: 404
       end
     else
 
