@@ -1,24 +1,30 @@
-# README
+# Quantified Self
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app provides a Rails based backend for a calorie tracking app. The frontend is deployed at http://meek-worm.surge.sh/index.html, with this backend at, https://fathomless-beach-36935.herokuapp.com/
 
-Things you may want to cover:
+## Ruby version
+This app uses:
+Ruby 2.4.2
+Rails 5.2
 
-* Ruby version
+## Setup
+After cloning this project, run
+bundle install
+rake db:create
+rake db:migrate
 
-* System dependencies
+The app is dependent upon the following meals, created from the command line.
+Run
+rails c
 
-* Configuration
+From the Rails console:
+Meal.create(id: 1, name: "Breakfast")
+Meal.create(id: 2, name: "Snack")
+Meal.create(id: 3, name: "Lunch")
+Meal.create(id: 4, name: "Dinner")
 
-* Database creation
+## Testing
 
-* Database initialization
+To run the test suite, run
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+rspec
