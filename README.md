@@ -4,8 +4,9 @@ This app provides a Rails based backend for a calorie tracking app. The frontend
 
 ## Ruby version
 This app uses:
-Ruby 2.4.2
-Rails 5.2
+
+* Ruby 2.4.2
+* Rails 5.2
 
 ## Setup
 After cloning this project, run
