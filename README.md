@@ -1,6 +1,6 @@
 # Quantified Self
 
-This app provides a Rails based backend for a calorie tracking app. The frontend is deployed at http://meek-worm.surge.sh/index.html, with this backend at, https://fathomless-beach-36935.herokuapp.com/
+This app provides a Rails based backend for a calorie tracking app. The frontend is deployed at http://meek-worm.surge.sh/index.html, with this backend at, https://fathomless-beach-36935.herokuapp.com/. The frontend repo is: https://github.com/apoc64/qs_frontend. Please note, that the frontend will require changes to the baseURL variable in order to point to a different backend location.
 
 ## Ruby version
 This app uses:
