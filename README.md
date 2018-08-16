@@ -9,22 +9,23 @@ Rails 5.2
 
 ## Setup
 After cloning this project, run
-bundle install
-rake db:create
-rake db:migrate
+* bundle install
+* rake db:create
+* rake db:migrate
 
 The app is dependent upon the following meals, created from the command line.
-Run
-rails c
+Run:
+* rails c
 
 From the Rails console:
-Meal.create(id: 1, name: "Breakfast")
-Meal.create(id: 2, name: "Snack")
-Meal.create(id: 3, name: "Lunch")
-Meal.create(id: 4, name: "Dinner")
+
+* Meal.create(id: 1, name: "Breakfast")
+* Meal.create(id: 2, name: "Snack")
+* Meal.create(id: 3, name: "Lunch")
+* Meal.create(id: 4, name: "Dinner")
 
 ## Testing
 
 To run the test suite, run
 
-rspec
+* rspec
